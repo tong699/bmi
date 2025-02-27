@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'info.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -156,7 +158,13 @@ class _MyHomePageState extends State<MyHomePage> {
               IconButton(
                 icon: const Icon(Icons.info),
                 color: Colors.orangeAccent,
-                onPressed: (){},
+                iconSize: 48,
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context)=> Info(bmi: _bmiOutput)),
+                  );
+                },
               ),
 
               const Expanded(child: SizedBox(height: double.infinity,),),
