@@ -180,7 +180,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       onPressed: _calculateBMI, child: const Text('Calculate')),
                 ],
               ),
-
             ],
           ),
         ),
