@@ -9,9 +9,9 @@ class Info extends StatelessWidget {
   Widget advise() {
     if (bmi.contains('Normal')) {
       return Text('Maintain your status');
-    } else if (bmi.contains('Underweight')){
+    } else if (bmi.contains('Underweight')) {
       return Text('Eat More');
-    }else{
+    } else {
       return Text('Eat less');
     }
   }
@@ -29,9 +29,9 @@ class Info extends StatelessWidget {
           children: [
             const Text(
               'Body mass index (BMI) is a value derived from the mass (weight) and height of '
-                  'a person.\n\nThe BMI is defined as the body mass divided by the square of the body '
-                  'height, and is expressed in units of kg/m², resulting from mass in kilograms '
-                  '(kg) and height in metres (m).',
+              'a person.\n\nThe BMI is defined as the body mass divided by the square of the body '
+              'height, and is expressed in units of kg/m², resulting from mass in kilograms '
+              '(kg) and height in metres (m).',
             ),
             Table(
               border: TableBorder.all(color: Colors.orangeAccent),
@@ -80,7 +80,8 @@ class Info extends StatelessWidget {
             ),
             bmi == ''
                 ? const Text('Please Enter your weight and height')
-                : Text('Your Body Mass Index is: $bmi'), // Fixed string concatenation
+                : Text('Your Body Mass Index is: $bmi'),
+            // Fixed string concatenation
 
             // bmi.contains('Underweight')? Text('Eat More!'): Text(''),
             // bmi.contains('Normal')? Text('Keep it Up!'): Text(''),
@@ -89,7 +90,8 @@ class Info extends StatelessWidget {
             //or
             advise(),
 
-            const Expanded(child: SizedBox()), // Expanded widget correctly placed
+            const Expanded(child: SizedBox()),
+            // Expanded widget correctly placed
 
             ElevatedButton(
               onPressed: () {
