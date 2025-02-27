@@ -6,6 +6,16 @@ class Info extends StatelessWidget {
 
   final String bmi;
 
+  Widget advise() {
+    if (bmi.contains('Normal')) {
+      return Text('Maintain your status');
+    } else if (bmi.contains('Underweight')){
+      return Text('Eat More');
+    }else{
+      return Text('Eat less');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,6 +81,13 @@ class Info extends StatelessWidget {
             bmi == ''
                 ? const Text('Please Enter your weight and height')
                 : Text('Your Body Mass Index is: $bmi'), // Fixed string concatenation
+
+            // bmi.contains('Underweight')? Text('Eat More!'): Text(''),
+            // bmi.contains('Normal')? Text('Keep it Up!'): Text(''),
+            // bmi.contains('Overweight')? Text('...'): Text(''),
+
+            //or
+            advise(),
 
             const Expanded(child: SizedBox()), // Expanded widget correctly placed
 
